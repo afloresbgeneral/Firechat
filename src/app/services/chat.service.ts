@@ -65,7 +65,9 @@ export class ChatService {
     const message: MessageInterface = {
       name: this.user.displayName,
       message: text,
-      date: new Date().getTime()
+      date: new Date().getTime(),
+      photoUrl: this.user.photoUrl,
+      uid: this.user.uid
     };
 
     return this.itemsCollection.add(message);

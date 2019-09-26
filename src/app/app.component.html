@@ -6,12 +6,11 @@
       </button>
     </div> -->
 
-  <!-- <h1>FireChat</h1>
 
-
-  <div class="chat-window">
+  <div *ngIf="!chatService.loading && chatService.user?.displayName " class="chat-window">
+    <h1>FireChat</h1>
     <app-chat></app-chat>
 
-  </div> -->
+  </div>
 </div>
 <router-outlet></router-outlet>
